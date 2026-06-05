@@ -27,7 +27,7 @@ radio-player/
 └── yemcoders-radio-player.php
 ```
 
----
+
 
 # 🛠️ Features Overview
 
@@ -41,7 +41,7 @@ The plugin is built using native HTML5 audio capabilities, ensuring stable and l
 - Automatic recovery handling for interrupted streams  
 - Lightweight architecture for fast load times  
 
----
+
 
 ## 🎨 Advanced UI / UX System (v10 Layout)
 
@@ -54,7 +54,7 @@ The UI is designed for responsiveness, scalability, and theme independence.
 - Modular CSS architecture for safe theme compatibility  
 - Isolated styling system to prevent CSS conflicts  
 
----
+
 
 ## ⚙️ WordPress Admin Dashboard
 
@@ -68,7 +68,7 @@ The plugin includes a powerful admin panel for managing stations and settings.
 - Control grid layout and pagination options  
 - Built-in help documentation inside dashboard  
 
----
+
 
 ## 🔗 Shortcode System
 
@@ -85,7 +85,7 @@ Easily embed the player anywhere in your WordPress site:
 [yemcoders_radio_player language="Spanish" country="Spain"]
 ```
 
----
+
 
 # 🚀 Installation Guide
 
@@ -98,7 +98,7 @@ Easily embed the player anywhere in your WordPress site:
 5. Click Install Now  
 6. Activate Plugin  
 
----
+
 
 ## Option 2: Manual Upload (FTP)
 
@@ -108,7 +108,6 @@ Easily embed the player anywhere in your WordPress site:
 4. Upload `radio-player` folder  
 5. Activate plugin from WordPress dashboard  
 
----
 
 # 💻 Developer Guide
 
@@ -123,7 +122,7 @@ Easily embed the player anywhere in your WordPress site:
 
 ⚠️ Ensure proper cleanup of event listeners to prevent memory leaks.
 
----
+
 
 ## CSS System
 
@@ -133,7 +132,7 @@ Easily embed the player anywhere in your WordPress site:
 - Safe for Elementor, WPBakery, and custom themes  
 - Mobile-first responsive design  
 
----
+
 
 ## PHP Core System
 
@@ -145,7 +144,7 @@ Main plugin file handles:
 - AJAX station management  
 - User favorites system  
 
----
+
 
 # 🤝 Contribution Guide
 
@@ -164,7 +163,7 @@ Main plugin file handles:
    ```
 5. Open Pull Request  
 
----
+
 
 # 📄 License
 
