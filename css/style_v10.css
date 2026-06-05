@@ -1,0 +1,185 @@
+/* === YemCoders Radio Player - In-Page Styles === */
+
+/* Wrapper for player and grid */
+.custom-radio-player-wrapper {
+    margin-bottom: 30px; /* Space after the whole component */
+}
+
+/* Main player container - STYLES FROM "SIMPLIFIED NON-STICKY" VERSION */
+.custom-radio-player {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.8); /* Original background */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 700px;
+    box-sizing: border-box;
+}
+
+/* Station logo in player - STYLES FROM "SIMPLIFIED NON-STICKY" */
+.custom-radio-player .radio-logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+/* Audio controls in player - STYLES FROM "SIMPLIFIED NON-STICKY" */
+.custom-radio-player audio {
+    max-width: 280px;
+    height: 35px;
+    margin: 5px 8px;
+    flex-grow: 1;
+}
+
+/* Station selector dropdown in player - STYLES FROM "SIMPLIFIED NON-STICKY" */
+.custom-radio-player select {
+    max-width: 160px;
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 6px;
+    border-radius: 5px;
+    height: 35px;
+    font-size: 15px;
+    margin: 5px 8px;
+}
+
+/* Disclaimer Icon and Text in player - STYLES FROM "SIMPLIFIED NON-STICKY" */
+.custom-radio-player .disclaimer-info {
+    position: relative;
+    display: inline-block;
+    margin: 5px 5px 5px 10px;
+    cursor: pointer;
+}
+.custom-radio-player .disclaimer-info i.fas.fa-info-circle { /* Use fas for FA5 */
+    font-size: 22px;
+    color: #ccc;
+    padding: 5px;
+}
+.custom-radio-player .disclaimer-info:hover i.fas.fa-info-circle {
+    color: white;
+}
+.custom-radio-player .disclaimer-text {
+    visibility: hidden; opacity: 0; position: absolute;
+    bottom: 120%; left: 50%; transform: translateX(-50%);
+    background-color: #333; color: white; padding: 10px;
+    border-radius: 5px; font-size: 13px; width: max-content; max-width: 240px;
+    transition: opacity 0.3s ease, visibility 0.3s ease; text-align: center; z-index: 5;
+}
+.custom-radio-player .disclaimer-info:hover .disclaimer-text { visibility: visible; opacity: 1; }
+
+/* Sound bar in player - STYLES FROM "SIMPLIFIED NON-STICKY" (basic animation) */
+.custom-radio-player .sound-bar {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    width: 40px; height: 25px;
+    margin: 5px 0 5px 10px; overflow: hidden;
+}
+.custom-radio-player .sound-bar .bar {
+    width: 4px; background-color: white; height: 5px; border-radius: 1px;
+    animation: equalizer_simple 1.2s ease-in-out infinite alternate; /* Ensure this keyframes rule exists */
+}
+.custom-radio-player .sound-bar .bar:nth-child(1) { animation-delay: 0s; }
+.custom-radio-player .sound-bar .bar:nth-child(2) { animation-delay: -0.2s; }
+.custom-radio-player .sound-bar .bar:nth-child(3) { animation-delay: -0.4s; }
+.custom-radio-player .sound-bar .bar:nth-child(4) { animation-delay: -0.6s; }
+.custom-radio-player .sound-bar .bar:nth-child(5) { animation-delay: -0.8s; }
+
+.custom-radio-player .sound-bar.paused .bar { /* Class added by JS */
+    animation: none; height: 2px; background-color: #555; /* Or #666 if you prefer */
+}
+@keyframes equalizer_simple { /* Ensure this keyframe rule is present */
+    0% { height: 3px; }
+    50% { height: 20px; }
+    100% { height: 3px; }
+}
+
+
+/* --- Radio Station Grid Styles - KEEP THESE FROM THE LATEST ANSWER --- */
+.radio-station-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Fixed 6 columns */
+    gap: 15px;
+    padding: 20px 0;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.station-grid-item {
+    background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 8px;
+    text-align: center; padding: 10px; cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    min-height: 120px;
+}
+.station-grid-item:hover,
+.station-grid-item:focus {
+    transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    outline: 2px solid #0073aa;
+}
+.station-grid-item img {
+    width: 60px; height: 60px; object-fit: cover; border-radius: 50%;
+    margin-bottom: 8px; background-color: #eee; border: 1px solid #ccc;
+}
+.station-grid-item .station-grid-name {
+    font-size: 13px; color: #333; margin: 0; line-height: 1.3;
+}
+
+/* Style the Popup Player Button */
+#yc-open-popup-player-btn {
+    background-color: #0073aa; /* Example WordPress blue */
+    color: white;
+    border: 1px solid #006594;
+    padding: 8px 15px;
+    font-size: 20px;
+    font-weight: normal;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+#yc-open-popup-player-btn:hover {
+    background-color: #006594;
+    border-color: #005075;
+}
+
+#yc-open-popup-player-btn .fas { /* Icon styling */
+    margin-left: 8px;
+    font-size: 0.9em;
+}
+
+/* Optional: Ensure the button container is aligned as desired */
+.popup-player-button-container {
+    text-align: right; /* Already in your PHP, but can be reinforced */
+    margin-bottom: 15px; /* Give some space below it */
+}
+
+/* Responsive adjustments for the grid - KEEP THESE */
+@media (max-width: 900px) {
+    .radio-station-grid { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 600px) {
+    .radio-station-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .station-grid-item img { width: 50px; height: 50px; }
+    .station-grid-item .station-grid-name { font-size: 12px; }
+}
+@media (max-width: 400px) {
+    .radio-station-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Responsive adjustments for Player (use simplified versions or adjust) */
+@media (max-width: 650px) {
+    .custom-radio-player { justify-content: center; padding: 10px; }
+    .custom-radio-player audio { max-width: 100%; order: 3; }
+    .custom-radio-player .radio-logo { order: 1; margin-bottom: 5px; }
+    .custom-radio-player select { order: 2; max-width: 70%; margin-bottom: 5px; }
+}
+@media (max-width: 480px) {
+    .custom-radio-player .radio-logo img { width: 35px; height: 35px; }
+    .custom-radio-player select { font-size: 14px; }
+}
